@@ -1,0 +1,219 @@
+Name : Mohan prasanth.E    Skils : Software Testing     Mob no : 9677680225
+
+Selenium : 
+
+1. Write code for handling multiple windows? 
+
+set<string> allwindowsIs = driver.getWindowHandles();
+
+
+2.Write code for positive and negative scenarios for Alerts? 
+
+Alert al = driver.switchTo().alert();
+al.accept();
+al.dismiss();
+
+
+3.Write code for handling frames?
+
+driver.switchTo().frame(index);
+driver.switchTo().frame(id);
+driver.switchTo().frame(WebElement refname);
+
+
+4.Select multiple options from the dropdown ?
+
+select s1 = new select(WebElement Refname);
+s1.selectByIndex(1);
+s1.selectByIndex(2);
+s1.selectByIndex(3);
+
+ 
+5.write code for taking Screenshot?
+
+TakesScreenshot ts = (TakesScreenshot)driver;
+File src = ts.getScreendhotAs(OutputType.FILE);
+File desr = new File(path);
+FileHandler.copy(src,dest);
+
+
+6.rite test scenario for credit cards?
+
+* Verify the maximum credit limit on credit card displaying as respected
+* Verify that credit card transaction with the valid pin number 
+* Verify that maximum withdrawl limit of the credit card 
+* Cerify that the CVV number should be displayed on the backside of the credit card.
+
+
+7.rite code for handling multiple browsers and switch to new windows?
+
+set<String> allWindowsIs = driver.getWindowHandles();
+
+int i=0
+for(String x:allWindowIs)
+{
+  if(i==1)
+  {
+     driver.switchTo().windows(x);
+  }
+  i++;
+}
+
+
+8.ow to find more than one web element in the list?
+
+List<WbElement> list = driver.findElements(By.xpath("//....");
+
+int l1 = list.size();
+ 
+if(l1>1)
+{
+  system.out.println(list as a more than one web element);
+}
+else 
+{
+  system.out.println(list has a less than one webelement);
+}
+
+Java :
+
+1.How do we reverse a string ?
+
+  String s = "Mohan";
+  String rev = "";                               Output : nahom
+  char[] a = s.tocharArray();
+  for (int i=a.length-1; i>=0; i--)
+  {
+     rev=rev+a[i];
+  }
+  system.out.println(rev);
+
+
+2.How is an infinite loop declared in java?
+
+ini i=1;
+
+while(i==1)
+{
+  system.out.println(i);
+}
+
+
+3.Write a program to generate the following output in java?
+
+public static void main(String[]args) {
+                                             Output : *    
+  int (int i=1; i<=7; i++)                            * *
+  {                                                   * * *
+     for(int j=1; j<=i; j++)                          * * * *
+     {                                                * * * * *
+       system.out.println("*");
+     }
+  system.out.println("\n");
+  }
+}
+
+
+4.Write a program to demonstrate the method overloading by changing data types?
+
+public void Bike(String brand)
+{
+  system.out.println("Bike brand is"+brand);
+}
+
+public void Bike(int speed)
+{
+  system.out.println("Maximum speed is"+speed);
+}
+
+Manual Testing :
+
+1.Write any 5 negative testcases?
+
+Login Page negative Testcases:
+
+*Login with empty required fields.
+*Login with an invalid email.
+*Login with an unregistered email.
+*Login with an invalid password.
+*Login with both email and password invalid.
+*Restore a password with an invalid email.
+*Restore a password with an unregistered email.
+
+
+2.Write a few testcases for booking tickets in redbus?
+
+* Verify the user logged in redbus sucessfully.
+* verify user that from & to text fields are entered as user respected
+* Verify that From text box shows a a suggestion when user entered a source place
+* Verify that To text box shows in a suggestion when user entered a destination place
+* verify that user entered valid journey date
+* verify that date field shows as a expected date 
+* Verify that the seats which are available for booking.
+* Verify that if seats are booked should show a warning message.
+* verify that user enters invalid source or destination place & should not be displayed in suggestion list.
+* verify that user enters invalid places and search for root, it should show warning message 'No Buses on this root'.
+
+
+3.Write testcases for amazon website view?
+
+Test Cases for Amazon login:
+
+*First, check that the page redirects the user to the valid login page or when the user clicks on the login button.
+*Check that the cursor blinks by default in "Email or mobile phone number".
+*Check the web element present are as per requirement or not - Amazon Logo, "Email or mobile phone number text box, continue button, create your amazon account button, Need help, Privacy     Notice, Condition of use,  etc.
+*Check whether "Email or mobile phone number" is clickable or not. 
+*Check that user is able to type in the "Email or mobile phone number" text box. 
+*Check that when the user clicks on the continue button. 
+*Check that when the user clicks on the continue button by entering the valid email or mobile number.
+*Check that when the user clicks on invalid mobile or email by entering invalid mobile or email.
+*Check that when the user clicks on the continue button without entering mobile or email.
+*Check that when the user enters the unregistered email or mobile and clicks on the continue message.
+*Verify the alert message when the user clicks on the continue button by entering invalid mobile or email.
+*Check that when the user clicks on the amazon logo.
+*Check whether the logo is as per requirement or not.
+*Check whether the system redirects the user to a valid page or not when the user clicks on the amazon logo.
+*Check that when the user clicks on the "create your amazon button ".
+*Check whether the system redirects the user to a valid page or not when the user clicks on the "create your amazon account" Button.
+*Check that system redirects the user to a valid page or not when the user clicks on Condition of Use, Privacy Notice, and Need Help Links.
+*Verify the cursor icon when the user hovers the mouse on the link.
+*Check that when the page redirects the user to a valid page or when the user enters valid mobile or email.
+*Verify the design, Font, Color, spelling mistakes etc. on the login page.
+
+
+4.Write a bug reports for a bug in the login page that the submit button is not working?
+
+Title : submit button for login page.
+
+Create a description:
+    *Issue on submit button for login page 
+
+    *Expected result 
+         * when the user click the submit button,the page should login successfully.
+
+    *Actual result 
+         * when the user click the submit button,the page does not login page.
+
+    *Steps Reproduce
+         * Entered valid Url application
+         * Entered valid login details 
+         * Click on submit button.
+
+    *Attach any screenshot evidence
+          
+    *Set priority for the bug generted
+    
+    *Set any linked issues
+        *Block any user story
+    
+    * Envirinmental setup
+        *Chrome browser user for testing 
+
+    *Assigning 
+        *Assign the respect to the team members
+    
+    *Epic 
+         *Bugs comes under the login epic
+
+    *Sprint
+         *Bugs belongs to sprint 1.
